@@ -1,0 +1,8 @@
+model {
+    Object object
+}
+
+json {
+    hal.links(object)
+    version '1.0'
+}

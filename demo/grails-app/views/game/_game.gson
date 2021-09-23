@@ -1,0 +1,11 @@
+import com.example.Game
+
+inherits template: '../parent'
+
+model {
+    Game game
+}
+
+json g.render(game, [includes: ['name', 'minPlayers', 'maxPlayers']]) {
+    source g.link(url: 'https://boardgamegeek.com')
+}
