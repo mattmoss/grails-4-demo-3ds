@@ -6,6 +6,10 @@ model {
     Game game
 }
 
-json g.render(game, [includes: ['name', 'minPlayers', 'maxPlayers']]) {
+json g.render(game, [includes: ['name', 'minPlayers']]) {
+    maxPlayers "At most ${game.maxPlayers}"
+    if (game.maxPlayers <= game.minPlayers) {
+        message "Bad game!"
+    }
     source g.link(url: 'https://boardgamegeek.com')
 }

@@ -10,4 +10,10 @@ class GameController extends RestfulController<Game> {
         super(Game)
     }
 
+    def index(Integer max) {
+        if (max < 0) { max = null }
+        params.max = Math.min(max ?: 10, 100)
+        respond listAllResources(params), model: [("${resourceName}Count".toString()): countResources()]
+    }
+
 }

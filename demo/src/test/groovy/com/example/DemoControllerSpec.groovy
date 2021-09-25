@@ -1,4 +1,4 @@
-package src.example
+package com.example
 
 import com.example.DemoController
 import grails.testing.web.controllers.ControllerUnitTest

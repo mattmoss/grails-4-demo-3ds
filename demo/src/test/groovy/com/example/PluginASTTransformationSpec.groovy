@@ -1,6 +1,6 @@
-package src.example
+package com.example
 
-import com.example.MagicNumber
+
 import spock.lang.Specification
 
 class PluginASTTransformationSpec extends Specification {
