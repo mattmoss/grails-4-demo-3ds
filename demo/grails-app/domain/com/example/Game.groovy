@@ -1,6 +1,6 @@
 package com.example
 
-class Game implements UniversalId<Game> {
+class Game implements UniversalId<Game>, Expandable<Game> {
 
     String name
     String genre
